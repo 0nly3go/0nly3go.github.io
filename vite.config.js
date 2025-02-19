@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/', // This is important for GitHub Pages
+  base: './', // Change this to use relative paths
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
