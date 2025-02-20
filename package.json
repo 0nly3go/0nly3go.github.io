@@ -1,5 +1,7 @@
 {
   "name": "react-faithlineai",
+  "homepage": "https://0nly3go.github.io",
+  "description": "Faithline AI Website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
