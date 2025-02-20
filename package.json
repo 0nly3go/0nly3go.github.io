@@ -5,10 +5,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0nly3go/0nly3go.github.io.git"
+  },
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist --repo https://github.com/0nly3go/0nly3go.github.io.git",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
