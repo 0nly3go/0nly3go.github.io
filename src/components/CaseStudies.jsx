@@ -3,28 +3,28 @@ import { motion } from 'framer-motion';
 export const CaseStudies = () => {
   const cases = [
     {
-      client: "TechRetail Co.",
-      industry: "E-commerce",
-      before: "Manual inventory management, 15hrs/week",
+      client: "TimeAI",
+      industry: "Tech & Productivity",
+      before: "Manual time tracking, 10hrs/week",
       after: "AI-automated system, 2hrs/week",
-      roi: "87% time savings",
-      image: "/assets/cases/techretail.jpg"
+      roi: "5x productivity boost",
+      image: "/assets/cases/TimeAI.jpg"
     },
     {
-      client: "ServicePro Inc.",
-      industry: "Professional Services",
-      before: "50% customer response rate",
-      after: "95% response rate with AI",
-      roi: "90% faster responses",
-      image: "/assets/cases/servicepro.jpg"
+      client: "Hammer Media",
+      industry: "Digital Marketing",
+      before: "Manual customer insights",
+      after: "AI-powered analytics",
+      roi: "2x customer engagement",
+      image: "/assets/cases/HammerMediaLogo.jpg"
     },
     {
-      client: "DataFlow Systems",
-      industry: "Data Analytics",
-      before: "Manual data processing",
+      client: "SWYVL",
+      industry: "Financial Services",
+      before: "Manual data entry, 5hrs/day",
       after: "Automated AI insights",
-      roi: "3x revenue growth",
-      image: "/assets/cases/dataflow.jpg"
+      roi: "20% increase in Financial Literacy",
+      image: "/assets/cases/swyvl.png"
     }
   ];
 
@@ -76,12 +76,11 @@ export const CaseStudies = () => {
         {/* Recognition Section */}
         <div className="mt-20 text-center">
           <h3 className="text-2xl font-semibold text-white mb-8">Recognition & Partnerships</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"> {/* Updated grid columns and added max-width + margin */}
             {[
               { name: "Elon Innovation Challenge", image: "/assets/awards/innovationChallenge.png" },
               { name: "Techstars Runner Up", image: "/assets/awards/techstars.png" },
-              { name: "Top 50 AI Startups", image: "/assets/awards/top-50.png" },
-              { name: "Business Growth Award", image: "/assets/awards/growth.png" }
+              { name: "NC Idea", image: "/assets/awards/NCIDEA.png" }
             ].map((award, index) => (
               <motion.div
                 key={index}
