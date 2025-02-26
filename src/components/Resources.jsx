@@ -61,8 +61,12 @@ export const Resources = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  translateZ: 20,
+                }}
                 transition={{ delay: index * 0.2 }}
-                className="group relative"
+                className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20 overflow-hidden"
               >
                 <div className="aspect-video rounded-lg overflow-hidden bg-gray-800">
                   <img 
@@ -103,6 +107,10 @@ export const Resources = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  translateZ: 20,
+                }}
                 transition={{ delay: index * 0.2 }}
                 className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20"
               >

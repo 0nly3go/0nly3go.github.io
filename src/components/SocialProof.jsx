@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const SocialProof = () => {
   const clients = [
-    { name: 'TimeAI', logo: '/assets/clients/TimeAI.png' },
+    { name: 'TimeAI', logo: '/assets/clients/TimeAI.jpg' },
     { name: 'SWYVL', logo: '/assets/clients/swyvl.png' },
     { name: 'Elon AI Center', logo: '/assets/clients/ElonAICenter.png' },
   ];
@@ -18,7 +18,7 @@ export const SocialProof = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="w-32 h-12 relative grayscale hover:grayscale-0 transition-all duration-300"
+              className="w-48 h-20 relative grayscale hover:grayscale-0 transition-all duration-300"
             >
               <img 
                 src={client.logo}

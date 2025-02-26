@@ -9,13 +9,13 @@ export const Testimonials = () => {
   const testimonials = [
     {
       name: "Shriya Baru",
-      role: "CEO, Shriyas",
+      role: "CEO, Kolis USA",
       feedback: "FaithLineAI transformed our online presence, increasing sales by 40%.",
       image: "/assets/testimonials/shriya.jpg"
     },
     {
       name: "Michael Gemintri",
-      role: "Marketing Director, Geminitri Agency",
+      role: "Social Media Growth Consultant, Hammer Media",
       feedback: "The AI-powered customer insights helped us better understand our market.",
       image: "/assets/testimonials/michael.jpg"
     },
@@ -61,6 +61,10 @@ export const Testimonials = () => {
                 className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 p-6 rounded-xl border border-cyan-500/20 backdrop-blur-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ 
+                  scale: 1.02,
+                  translateZ: 20,
+                }}
                 transition={{ delay: index * 0.2 }}
               >
                 <div className="flex flex-col items-center">

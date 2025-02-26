@@ -77,14 +77,14 @@ function App() {
               <motion.a
                 href="https://tidycal.com/jmason16/30-minute-meeting"
                 whileHover={{ scale: 1.05 }}
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
+                className="action-button px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
               >
                 Get Started Free
               </motion.a>
               <motion.a
                 href="#services"
                 whileHover={{ scale: 1.05 }}
-                className="px-8 py-3 bg-white/10 border border-white/20 rounded-lg font-medium backdrop-blur-sm"
+                className="action-button px-8 py-3 bg-white/10 border border-white/20 rounded-lg font-medium backdrop-blur-sm"
               >
                 Explore Services
               </motion.a>
@@ -167,6 +167,10 @@ function App() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ 
+                    scale: 1.02,
+                    translateZ: 20,
+                  }}
                   transition={{ delay: index * 0.2 }}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl border border-cyan-500/20"
                 >
@@ -215,17 +219,16 @@ function App() {
               <h3 className="text-2xl font-semibold text-white text-center mb-8">Our Journey</h3>
               <div className="space-y-4">
                 {[
-                  { year: "2020", title: "Founded", desc: "Started with a vision to democratize AI" },
-                  { year: "2021", title: "First 100 Clients", desc: "Reached milestone of helping 100 businesses" },
-                  { year: "2022", title: "AI Innovation Award", desc: "Recognized for breakthrough solutions" },
-                  { year: "2023", title: "Global Expansion", desc: "Extended services to international markets" }
+                  { year: "2023", title: "Founded", desc: "Started with a vision to bring big ideas to small communities" },
+                  { year: "2024", title: "University Innovation Award", desc: "Recognized for breakthrough solutions developing tools to help college community" },
+                  { year: "2025", title: "Teaching and Learning", desc: "Founded organization with over 100 individuals passionate about learning innovative technologies" }
                 ].map((milestone, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.2 }}
-                    className="flex items-center gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm"
+                    className=" gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm"
                   >
                     <div className="text-cyan-400 font-bold text-xl">{milestone.year}</div>
                     <div>
