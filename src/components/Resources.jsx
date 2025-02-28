@@ -3,22 +3,10 @@ import { motion } from 'framer-motion';
 export const Resources = () => {
   const videos = [
     {
-      title: "Getting Started with AI Automation",
-      thumbnail: "/assets/videos/thumbnails/ai-automation.jpg",
-      youtubeId: "xsUBvZbuXvU",
-      duration: "15:24"
-    },
-    {
-      title: "AI for Small Business Growth",
-      thumbnail: "/assets/videos/thumbnails/business-growth.jpg",
-      youtubeId: "VIDEO_ID_2",
-      duration: "12:45"
-    },
-    {
-      title: "Understanding Predictive Analytics",
-      thumbnail: "/assets/videos/thumbnails/analytics.jpg",
-      youtubeId: "VIDEO_ID_3",
-      duration: "18:30"
+      title: "Securing Finance with Blockchain and Artificial Intelligence",
+      thumbnail: "/assets/videos/thumbnails/blockchain-ai.jpg",
+      youtubeId: "_WAt2nDwu8I",
+      duration: "3:00"
     }
   ];
 
@@ -30,10 +18,10 @@ export const Resources = () => {
       downloadUrl: "/assets/guides/Understanding AI_ From Basics to Buzzwords.pdf"
     },
     {
-      title: "ROI Calculator Template",
-      description: "Calculate the potential return on AI investment",
-      icon: "📊",
-      downloadUrl: "/assets/guides/roi-calculator.pdf"
+      title: "Tech Consultant Pro",
+      description: "Calculate costs and get recommendations for your tech infrastructure using our custom GPT",
+      icon: "🤖",
+      downloadUrl: "https://chatgpt.com/g/g-vxMMLnhVc-tech-consultant-pro"
     }
   ];
 
@@ -55,7 +43,7 @@ export const Resources = () => {
         {/* Video Section */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-white mb-8">Featured Videos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 max-w-xl mx-auto gap-8">
             {videos.map((video, index) => (
               <motion.div
                 key={index}
@@ -126,7 +114,7 @@ export const Resources = () => {
                   <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
-                  Download PDF
+                  Access for Free
                 </motion.a>
               </motion.div>
             ))}
