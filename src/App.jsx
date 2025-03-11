@@ -79,7 +79,7 @@ function App() {
                 whileHover={{ scale: 1.05 }}
                 className="action-button px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
               >
-                Let's Talk
+                Let's Talk!
               </motion.a>
               <motion.a
                 href="#services"
