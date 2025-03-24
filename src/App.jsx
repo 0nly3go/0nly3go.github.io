@@ -15,6 +15,9 @@ import { CaseStudies } from './components/CaseStudies';
 import { Resources } from './components/Resources';
 
 function App() {
+  // Get base URL from import.meta.env or default to '/'
+  const baseUrl = import.meta.env.BASE_URL || '/';
+
   return (
     <div className="w-screen min-h-screen bg-gradient-to-b from-gray-900 to-black text-white relative overflow-x-hidden">
       <div className="absolute inset-0 z-0 w-full h-full">
@@ -24,7 +27,7 @@ function App() {
         {/* Navbar */}
         <nav className="w-full flex justify-between items-center px-12 py-6">
           <div>
-            <img src="/assets/LogoMark_White.png" alt="FaithLineAI Logo" className="h-10 w-auto object-contain" />
+            <img src={`${baseUrl}assets/LogoMark_White.png`} alt="FaithLineAI Logo" className="h-10 w-auto object-contain" />
           </div>
           <div className="flex items-center space-x-6 text-lg font-medium">
             <a href="#about" className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors">About Us</a>
@@ -293,7 +296,7 @@ function App() {
   >
     <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-cyan-500/20">
       <img
-        src="/assets/team/Joshua.jpg"
+        src={`${baseUrl}assets/team/Joshua.jpg`}
         alt="Joshua Mason"
         className="w-full h-full object-cover"
       />
@@ -366,7 +369,7 @@ function App() {
                   ),
                   desc: "Streamline your operations with AI-powered automation that reduces manual tasks by up to 80%",
                   benefits: ["Reduced operational costs", "Fewer human errors", "Faster processing times"],
-                  image: "/assets/services/workflow.jpg"
+                  image: `${baseUrl}assets/services/workflow.jpg`
                 },
                 { 
                   title: "Customer Relations",
@@ -379,7 +382,7 @@ function App() {
                   ),
                   desc: "Enhance customer satisfaction with personalized AI interactions and 24/7 support capabilities",
                   benefits: ["Improved response times", "Personalized experiences", "Scalable support"],
-                  image: "/assets/services/customer.jpg"
+                  image: `${baseUrl}assets/services/customer.jpg`
                 },
                 { 
                   title: "Predictive Analytics",
@@ -392,7 +395,7 @@ function App() {
                   ),
                   desc: "Make data-driven decisions with AI insights that predict trends and identify opportunities",
                   benefits: ["Accurate forecasting", "Risk mitigation", "Growth opportunities"],
-                  image: "/assets/services/analytics.jpg"
+                  image: `${baseUrl}assets/services/analytics.jpg`
                 }
               ].map((service, index) => (
                 <motion.div 
