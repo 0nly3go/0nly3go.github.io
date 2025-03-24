@@ -33,22 +33,14 @@ function App() {
             <a href="#contact" className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors">Contact Us</a>
             <motion.a 
               href="#contact" 
-              className="relative group overflow-hidden rounded-lg"
+              className="action-button px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
               whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(6, 182, 212, 0.5)"
               }}
+              whileTap={{ scale: 0.98 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#06b6d4]/10 to-[#0ea5e9]/10 backdrop-blur-sm" />
-              <div className="px-6 py-2 bg-white/5 border border-white/10 relative z-10 text-[#06b6d4]">
-                Let's Talk
-              </div>
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-[#06b6d4]/20 to-[#0ea5e9]/20"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
+              Let's Talk
             </motion.a>
           </div>
         </nav>
@@ -57,42 +49,134 @@ function App() {
         <main className="w-full flex flex-col items-center justify-center text-center px-6 min-h-screen relative">
           <HeroVideo />
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-4xl mx-auto relative z-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="w-full mx-auto relative z-10"
           >
             <motion.h1 
-              className="text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-400"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
+              className="text-8xl/text-9xl/text-[10rem] font-bold leading-none tracking-wide text-white mb-16"
             >
-              Transform Your Business with AI
+              <motion.span
+                initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.2,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                className="inline-block mr-6"
+              >
+                Transform
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 0.6,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                className="inline-block mr-6"
+              >
+                Your
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 1.0,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                className="inline-block mr-6"
+              >
+                Business
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 1.4,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                className="inline-block mr-6"
+              >
+                With
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: 1.8,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                className="inline-block text-cyan-400"
+              >
+                AI
+              </motion.span>
             </motion.h1>
-            <p className="text-gray-300 text-xl mt-6 max-w-2xl mx-auto">
-              Empower your small business with intelligent automation and data-driven insights
-            </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <motion.p 
+              className="text-gray-300 text-3xl md:text-4xl mt-6 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 2.6,
+                type: "spring"
+              }}
+            >
+              Empower your small business with intelligent automation and data-driven insights
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap justify-center gap-6 mt-12"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                delay: 2.8,
+                type: "spring"
+              }}
+            >
               <motion.a
                 href="https://tidycal.com/jmason16/30-minute-meeting"
-                whileHover={{ scale: 1.05 }}
-                className="action-button px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(6, 182, 212, 0.5)" }}
+                whileTap={{ scale: 0.98 }}
+                className="action-button text-xl px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
               >
-                Let's Talk!
+                Let's Talk
               </motion.a>
               <motion.a
                 href="#services"
-                whileHover={{ scale: 1.05 }}
-                className="action-button px-8 py-3 bg-white/10 border border-white/20 rounded-lg font-medium backdrop-blur-sm"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)" }}
+                whileTap={{ scale: 0.98 }}
+                className="action-button text-xl px-10 py-4 bg-white/10 border border-white/20 rounded-lg font-medium backdrop-blur-sm"
               >
                 Explore Services
               </motion.a>
-            </div>
+            </motion.div>
           </motion.div>
           
           {/* Stats Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 w-full max-w-4xl relative z-10">
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 w-full max-w-5xl relative z-10"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.8, 
+              delay: 3.0,
+              type: "spring"
+            }}
+          >
             {[
               { number: "40%", label: "Average Efficiency Increase" },
               { number: "1000+", label: "Minutes Saved" },
@@ -100,16 +184,30 @@ function App() {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ 
+                  delay: 3.2 + index * 0.2, 
+                  duration: 0.6,
+                  type: "spring",
+                  stiffness: 100
+                }}
                 className="text-center"
               >
-                <h3 className="text-4xl font-bold text-cyan-400">{stat.number}</h3>
-                <p className="text-gray-400 mt-2">{stat.label}</p>
+                <motion.h3 
+                  className="text-5xl md:text-6xl font-bold text-cyan-400"
+                  whileHover={{ 
+                    scale: 1.1, 
+                    textShadow: "0 0 8px rgba(6, 182, 212, 0.8)"
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {stat.number}
+                </motion.h3>
+                <p className="text-gray-300 text-xl mt-3">{stat.label}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </main>
 
         <SocialProof />
