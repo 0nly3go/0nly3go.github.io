@@ -11,7 +11,7 @@ export const HeroVideo = () => {
         playsInline
         className="w-full h-full object-cover"
       >
-        <source src="/assets/videos/FaithlineBackground.mp4" type="video/mp4" />
+        <source src="/assets/videos/FaithlineBackgroundCompressed.mp4" type="video/mp4" />
       </video>
     </div>
   );
