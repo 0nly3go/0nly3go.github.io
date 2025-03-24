@@ -149,27 +149,17 @@ function App() {
             >
               <motion.a
                 href="https://tidycal.com/jmason16/30-minute-meeting"
-<<<<<<< HEAD
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(6, 182, 212, 0.5)" }}
                 whileTap={{ scale: 0.98 }}
                 className="action-button text-xl px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
-=======
-                whileHover={{ scale: 1.05 }}
-                className="action-button px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
->>>>>>> e7bc639a778cd992903eda19de0b8ad7cb62ce97
               >
                 Let's Talk
               </motion.a>
               <motion.a
                 href="#services"
-<<<<<<< HEAD
                 whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)" }}
                 whileTap={{ scale: 0.98 }}
                 className="action-button text-xl px-10 py-4 bg-white/10 border border-white/20 rounded-lg font-medium backdrop-blur-sm"
-=======
-                whileHover={{ scale: 1.05 }}
-                className="action-button px-8 py-3 bg-white/10 border border-white/20 rounded-lg font-medium backdrop-blur-sm"
->>>>>>> e7bc639a778cd992903eda19de0b8ad7cb62ce97
               >
                 Explore Services
               </motion.a>
