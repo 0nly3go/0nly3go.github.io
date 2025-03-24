@@ -32,13 +32,17 @@ a:hover {
 /* Add specific button link styles */
 .action-button {
   color: white !important; /* Force white text */
+<<<<<<< HEAD
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+=======
+>>>>>>> e7bc639a778cd992903eda19de0b8ad7cb62ce97
 }
 
 .action-button:hover {
   color: white !important; /* Keep white text on hover */
+<<<<<<< HEAD
   transform: translateY(-2px);
 }
 
@@ -59,6 +63,8 @@ a:hover {
 .action-button:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+=======
+>>>>>>> e7bc639a778cd992903eda19de0b8ad7cb62ce97
 }
 
 /* Modify the body styles */
