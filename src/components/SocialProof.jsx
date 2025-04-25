@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const SocialProof = () => {
   const clients = [
-    { name: 'TimeAI', logo: '/assets/clients/TimeAI.jpg' },
+    { name: 'Waste to Taste', logo: '/assets/clients/waste-to-taste.png', description: 'An app that uses a custom made Elon University events API to find events with food and alert students of them.' },
     { name: 'SWYVL', logo: '/assets/clients/swyvl.png' },
     { name: 'Elon AI Center', logo: '/assets/clients/ElonAICenter.png' },
   ];
@@ -25,6 +25,11 @@ export const SocialProof = () => {
                 alt={client.name}
                 className="w-full h-full object-contain"
               />
+              {client.description && (
+                <div className="absolute left-0 right-0 -bottom-10 text-xs text-gray-300 text-center w-full">
+                  {client.description}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
