@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 export const CaseStudies = () => {
   const cases = [
     {
-      client: "TimeAI",
-      industry: "Tech & Productivity",
-      before: "Manual time tracking, 10hrs/week",
-      after: "AI-automated system, 2hrs/week",
-      roi: "5x productivity boost",
-      image: "/assets/cases/TimeAI.jpg"
+      client: "Waste to Taste",
+      industry: "Campus Events & Food Recovery",
+      before: "Missed opportunities and food waste at campus events.",
+      after: "AI-powered event alerts connect students to free food.",
+      roi: "Hundreds of meals saved, happier students",
+      image: "/assets/cases/WasteToTaste.png"
     },
     {
       client: "Hammer Media",

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const SocialProof = () => {
   const clients = [
-    { name: 'TimeAI', logo: '/assets/clients/TimeAI.jpg' },
+    { name: 'Waste to Taste', logo: '/assets/clients/waste-to-taste.png', description: 'An app that uses a custom made Elon University events API to find events with food and alert students of them.' },
     { name: 'SWYVL', logo: '/assets/clients/swyvl.png' },
     { name: 'Elon AI Center', logo: '/assets/clients/ElonAICenter.png' },
   ];
