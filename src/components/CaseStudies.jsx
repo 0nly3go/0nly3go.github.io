@@ -5,9 +5,9 @@ export const CaseStudies = () => {
     {
       client: "Waste to Taste",
       industry: "Campus Events & Food Recovery",
-      before: "Missed opportunities and food waste at campus events.",
-      after: "AI-powered event alerts connect students to free food.",
-      roi: "Hundreds of meals saved, happier students",
+      before: "Missed opportunities & Food Waste",
+      after: "Location-based alerts for students",
+      roi: "100+ Meals Saved, Happier Students",
       image: "/assets/cases/WasteToTaste.png"
     },
     {
@@ -15,7 +15,7 @@ export const CaseStudies = () => {
       industry: "Digital Marketing",
       before: "Manual customer insights",
       after: "AI-powered analytics",
-      roi: "2x customer engagement",
+      roi: "2x Customer Engagement",
       image: "/assets/cases/HammerMediaLogo.jpg"
     },
     {
@@ -23,7 +23,7 @@ export const CaseStudies = () => {
       industry: "Financial Services",
       before: "Manual data entry, 5hrs/day",
       after: "Automated AI insights",
-      roi: "20% increase in Financial Literacy",
+      roi: "20% Increase in Financial Literacy",
       image: "/assets/cases/swyvl.png"
     }
   ];
