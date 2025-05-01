@@ -5,6 +5,7 @@ export const Footer = () => {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Support', href: '#support' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' }
   ];
