@@ -370,33 +370,62 @@ function App() {
 {/* Team Section */}
 <div className="mb-16 text-center">
   <h3 className="text-2xl font-semibold text-white mb-8">
-    Our Leadership Team
+    Our Team
   </h3>
 
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.2 }}
-    className="mx-auto text-center"
-  >
-    <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-cyan-500/20">
-      <img
-        src="/assets/team/Joshua.jpg"
-        alt="Joshua Mason"
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h4 className="text-white font-semibold mb-1">
-      Joshua Mason
-    </h4>
-    <p className="text-cyan-400 text-sm mb-2">
-      CEO & Founder
-    </p>
-    <p className="text-gray-400 text-sm">
-      Experience in AI research and development, with a passion 
-      for helping businesses succeed
-    </p>
-  </motion.div>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+      className="mx-auto text-center"
+    >
+      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-cyan-500/20">
+        <img
+          src="/assets/team/Joshua.jpg"
+          alt="Joshua Mason"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: 'center top' }}
+        />
+      </div>
+      <h4 className="text-white font-semibold mb-1">
+        Joshua Mason
+      </h4>
+      <p className="text-cyan-400 text-sm mb-2">
+        CEO & Founder
+      </p>
+      <p className="text-gray-400 text-sm">
+        Experience in AI research and development, with a passion 
+        for helping businesses succeed
+      </p>
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.4 }}
+      className="mx-auto text-center"
+    >
+      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-cyan-500/20">
+        <img
+          src="/assets/team/Aaron.jpg"
+          alt="Aaron Satko"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: 'center top' }}
+        />
+      </div>
+      <h4 className="text-white font-semibold mb-1">
+        Aaron Satko
+      </h4>
+      <p className="text-cyan-400 text-sm mb-2">
+        AI Consultant
+      </p>
+      <p className="text-gray-400 text-sm">
+        Expertise in computer science research, AI development, 
+        and computer repair
+      </p>
+    </motion.div>
+  </div>
 </div>
 
 
