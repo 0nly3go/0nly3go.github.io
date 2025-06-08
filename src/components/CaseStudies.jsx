@@ -39,38 +39,57 @@ export const CaseStudies = () => {
         <h2 className="text-4xl font-semibold text-white text-center mb-12">Success Stories</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cases.map((study, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors"
-            >
-              <div className="aspect-video mb-6 rounded-lg overflow-hidden">
-                <img 
-                  src={study.image} 
-                  alt={study.client}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{study.client}</h3>
-              <p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-              <div className="space-y-3">
-                <div className="p-3 bg-white/5 rounded-lg">
-                  <p className="text-gray-400 text-sm">Before</p>
-                  <p className="text-white">{study.before}</p>
+          {cases.map((study, index) => {
+            let link = null;
+            if (study.client === 'Waste to Taste') link = 'https://apps.apple.com/us/app/w2t/id6744896370';
+            if (study.client === 'Hammer Media') link = 'https://hammermedias.com/';
+            if (study.client === 'Elon AI Center') link = 'https://elonopenapps.azurewebsites.net/AItoolbox/toolbox.html';
+            const image = (
+              <img 
+                src={study.image} 
+                alt={study.client}
+                className="w-full h-full object-cover"
+              />
+            );
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors"
+              >
+                <div className="aspect-video mb-6 rounded-lg overflow-hidden">
+                  {link ? (
+                    <a href={link} target="_blank" rel="noopener noreferrer" aria-label={study.client} className="block w-full h-full">
+                      {image}
+                    </a>
+                  ) : image}
                 </div>
-                <div className="p-3 bg-white/5 rounded-lg">
-                  <p className="text-gray-400 text-sm">After</p>
-                  <p className="text-white">{study.after}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {link ? (
+                    <a href={link} target="_blank" rel="noopener noreferrer" aria-label={study.client} className="hover:underline">
+                      {study.client}
+                    </a>
+                  ) : study.client}
+                </h3>
+                <p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
+                <div className="space-y-3">
+                  <div className="p-3 bg-white/5 rounded-lg">
+                    <p className="text-gray-400 text-sm">Before</p>
+                    <p className="text-white">{study.before}</p>
+                  </div>
+                  <div className="p-3 bg-white/5 rounded-lg">
+                    <p className="text-gray-400 text-sm">After</p>
+                    <p className="text-white">{study.after}</p>
+                  </div>
+                  <div className="p-3 bg-cyan-500/10 rounded-lg">
+                    <p className="text-cyan-400 font-semibold">{study.roi}</p>
+                  </div>
                 </div>
-                <div className="p-3 bg-cyan-500/10 rounded-lg">
-                  <p className="text-cyan-400 font-semibold">{study.roi}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Recognition Section */}

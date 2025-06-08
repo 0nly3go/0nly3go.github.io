@@ -16,7 +16,7 @@ import { HeroVideo } from './components/HeroVideo';
 import { CaseStudies } from './components/CaseStudies';
 import { Resources } from './components/Resources';
 import { Support } from './components/Support';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 function scrollToSection(id) {
   // Wait for navigation, then scroll
@@ -24,6 +24,81 @@ function scrollToSection(id) {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }, 0);
+}
+
+function Navbar() {
+  const navigate = useNavigate();
+  // Helper for nav links
+  const handleNav = (section) => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => scrollToSection(section), 50);
+    } else {
+      scrollToSection(section);
+    }
+  };
+  return (
+    <nav className="w-full flex flex-col md:flex-row justify-between items-center px-4 md:px-12 py-6">
+      <div className="mb-4 md:mb-0">
+        <Link to="/">
+          <img src="/assets/LogoMark_White.png" alt="FaithLineAI Logo" className="h-10 w-auto object-contain" />
+        </Link>
+      </div>
+      <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-lg font-medium">
+        <button
+          onClick={() => handleNav('about')}
+          className="relative !bg-transparent !shadow-none !border-none appearance-none px-3 py-1 rounded-full font-medium text-[#06b6d4] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#06b6d4] group overflow-hidden"
+        >
+          <span className="relative z-10 group-hover:text-[#22d3ea] group-hover:font-semibold transition-colors duration-200">About Us</span>
+          <span className="absolute left-1/2 bottom-1 w-0 h-0.5 bg-[#22d3ea] rounded-full transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+          <span className="absolute inset-0 rounded-full bg-[#06b6d4]/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></span>
+        </button>
+        <button
+          onClick={() => handleNav('services')}
+          className="relative !bg-transparent !shadow-none !border-none appearance-none px-3 py-1 rounded-full font-medium text-[#06b6d4] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#06b6d4] group overflow-hidden"
+        >
+          <span className="relative z-10 group-hover:text-[#22d3ea] group-hover:font-semibold transition-colors duration-200">Services</span>
+          <span className="absolute left-1/2 bottom-1 w-0 h-0.5 bg-[#22d3ea] rounded-full transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+          <span className="absolute inset-0 rounded-full bg-[#06b6d4]/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></span>
+        </button>
+        <button
+          onClick={() => handleNav('testimonials')}
+          className="relative !bg-transparent !shadow-none !border-none appearance-none px-3 py-1 rounded-full font-medium text-[#06b6d4] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#06b6d4] group overflow-hidden"
+        >
+          <span className="relative z-10 group-hover:text-[#22d3ea] group-hover:font-semibold transition-colors duration-200">Testimonials</span>
+          <span className="absolute left-1/2 bottom-1 w-0 h-0.5 bg-[#22d3ea] rounded-full transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+          <span className="absolute inset-0 rounded-full bg-[#06b6d4]/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></span>
+        </button>
+        <button
+          onClick={() => handleNav('contact')}
+          className="relative !bg-transparent !shadow-none !border-none appearance-none px-3 py-1 rounded-full font-medium text-[#06b6d4] transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#06b6d4] group overflow-hidden"
+        >
+          <span className="relative z-10 group-hover:text-[#22d3ea] group-hover:font-semibold transition-colors duration-200">Contact Us</span>
+          <span className="absolute left-1/2 bottom-1 w-0 h-0.5 bg-[#22d3ea] rounded-full transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+          <span className="absolute inset-0 rounded-full bg-[#06b6d4]/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></span>
+        </button>
+        <Link 
+          to="/support" 
+          className="relative px-3 py-1 rounded-full font-medium text-[#06b6d4] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#06b6d4] group overflow-hidden"
+        >
+          <span className="relative z-10 group-hover:text-[#22d3ea] group-hover:font-semibold transition-colors duration-200">Support</span>
+          <span className="absolute left-1/2 bottom-1 w-0 h-0.5 bg-[#22d3ea] rounded-full transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+          <span className="absolute inset-0 rounded-full bg-[#06b6d4]/10 opacity-0 group-hover:opacity-100 transition-all duration-200"></span>
+        </Link>
+        <motion.button 
+          onClick={() => handleNav('contact')}
+          className="action-button px-6 py-2 bg-gradient-to-r from-[#2563eb] to-[#0ea5e9] rounded-lg font-medium shadow-lg shadow-[#2563eb]/20 text-white"
+          whileHover={{ 
+            scale: 1.05,
+            boxShadow: "0 0 20px rgba(37, 99, 235, 0.5)"
+          }}
+          whileTap={{ scale: 0.98 }}
+        >
+          Let's Talk
+        </motion.button>
+      </div>
+    </nav>
+  );
 }
 
 function App() {
@@ -36,99 +111,7 @@ function App() {
         </div>
         <div className="relative z-10 w-full">
           {/* Navbar */}
-          <nav className="w-full flex justify-between items-center px-12 py-6">
-            <div>
-              <Link to="/">
-                <img src="/assets/LogoMark_White.png" alt="FaithLineAI Logo" className="h-10 w-auto object-contain" />
-              </Link>
-            </div>
-            <div className="flex items-center space-x-6 text-lg font-medium">
-              <Link
-                to="/"
-                onClick={e => {
-                  e.preventDefault();
-                  if (window.location.pathname !== "/") {
-                    window.history.pushState({}, '', '/');
-                    setTimeout(() => scrollToSection('about'), 10);
-                  } else {
-                    scrollToSection('about');
-                  }
-                }}
-                className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors"
-              >
-                About Us
-              </Link>
-              <Link
-                to="/"
-                onClick={e => {
-                  e.preventDefault();
-                  if (window.location.pathname !== "/") {
-                    window.history.pushState({}, '', '/');
-                    setTimeout(() => scrollToSection('services'), 10);
-                  } else {
-                    scrollToSection('services');
-                  }
-                }}
-                className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors"
-              >
-                Services
-              </Link>
-              <Link
-                to="/"
-                onClick={e => {
-                  e.preventDefault();
-                  if (window.location.pathname !== "/") {
-                    window.history.pushState({}, '', '/');
-                    setTimeout(() => scrollToSection('testimonials'), 10);
-                  } else {
-                    scrollToSection('testimonials');
-                  }
-                }}
-                className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors"
-              >
-                Testimonials
-              </Link>
-              <Link
-                to="/"
-                onClick={e => {
-                  e.preventDefault();
-                  if (window.location.pathname !== "/") {
-                    window.history.pushState({}, '', '/');
-                    setTimeout(() => scrollToSection('contact'), 10);
-                  } else {
-                    scrollToSection('contact');
-                  }
-                }}
-                className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors"
-              >
-                Contact Us
-              </Link>
-              <Link to="/support" className="text-[#06b6d4] hover:text-[#22d3ea] transition-colors">
-                Support
-              </Link>
-              <motion.a 
-                href="#contact" 
-                className="action-button px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(6, 182, 212, 0.5)"
-                }}
-                whileTap={{ scale: 0.98 }}
-                onClick={e => {
-                  e.preventDefault();
-                  if (window.location.pathname !== "/") {
-                    window.history.pushState({}, '', '/');
-                    setTimeout(() => scrollToSection('contact'), 10);
-                  } else {
-                    scrollToSection('contact');
-                  }
-                }}
-              >
-                Let's Talk
-              </motion.a>
-            </div>
-          </nav>
-
+          <Navbar />
           <Routes>
             <Route path="/support" element={<Support />} />
             <Route path="/" element={
@@ -146,8 +129,8 @@ function App() {
                       className="text-8xl/text-9xl/text-[10rem] font-bold leading-none tracking-wide text-white mb-16"
                     >
                       <motion.span
-                        initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ 
                           duration: 0.8, 
                           delay: 0.2,
@@ -159,8 +142,8 @@ function App() {
                         Transform
                       </motion.span>
                       <motion.span
-                        initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ 
                           duration: 0.8, 
                           delay: 0.6,
@@ -172,8 +155,8 @@ function App() {
                         Your
                       </motion.span>
                       <motion.span
-                        initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ 
                           duration: 0.8, 
                           delay: 1.0,
@@ -185,8 +168,8 @@ function App() {
                         Business
                       </motion.span>
                       <motion.span
-                        initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ 
                           duration: 0.8, 
                           delay: 1.4,
@@ -198,8 +181,8 @@ function App() {
                         With
                       </motion.span>
                       <motion.span
-                        initial={{ opacity: 0, y: -50, filter: "blur(8px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ 
                           duration: 0.8, 
                           delay: 1.8,
@@ -237,9 +220,10 @@ function App() {
                     >
                       <motion.a
                         href="https://tidycal.com/jmason16/30-minute-meeting"
-                        whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(6, 182, 212, 0.5)" }}
+                        whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(37, 99, 235, 0.5)" }}
                         whileTap={{ scale: 0.98 }}
-                        className="action-button text-xl px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-medium shadow-lg shadow-cyan-500/20"
+                        className="action-button text-xl px-10 py-4 bg-gradient-to-r from-[#2563eb] to-[#0ea5e9] rounded-lg font-medium shadow-lg shadow-[#2563eb]/20 text-white"
+                        target="_blank" rel="noopener noreferrer"
                       >
                         Let's Talk
                       </motion.a>
