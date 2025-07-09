@@ -63,7 +63,7 @@ export default function AIConsulting() {
       <div className="relative h-96 md:h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
         <img
-          src="/assets/services/ai-consulting.jpg"
+          src="/assets/services/IMG_4951.heic"
           alt="AI Consulting & Strategy"
           className="w-full h-full object-cover"
           onError={(e) => {

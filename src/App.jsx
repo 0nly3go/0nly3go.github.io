@@ -33,6 +33,7 @@ import AIWorkshops from './pages/services/AIWorkshops';
 import SocialMediaAutomation from './pages/services/SocialMediaAutomation';
 import Mentorship from './pages/services/Mentorship';
 import EthicalAIConsulting from './pages/services/EthicalAIConsulting';
+import ChatbotWorkshop from './pages/workshops/ChatbotWorkshop';
 
 function scrollToSection(id) {
   // Wait for navigation, then scroll
@@ -562,7 +563,8 @@ function App() {
                           desc: "Empower your team or community with essential digital skills through engaging workshops on AI basics, digital literacy, and ethical tech use",
                           benefits: ["Hands-on learning", "Customized curriculum", "Ethical AI focus"],
                           image: "/assets/services/workshops.jpg"
-                        }
+                        },
+
                       ].map((service, index) => (
                         <motion.div 
                           key={index}
@@ -641,6 +643,7 @@ function App() {
             <Route path="/services/social-media-automation" element={<SocialMediaAutomation />} />
             <Route path="/services/mentorship" element={<Mentorship />} />
             <Route path="/services/ethical-ai-consulting" element={<EthicalAIConsulting />} />
+            <Route path="/workshops/chatbot-workshop" element={<ChatbotWorkshop />} />
           </Routes>
         </div>
       </div>

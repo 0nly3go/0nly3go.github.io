@@ -1,6 +1,15 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const upcoming = [
+  { 
+    title: 'AI Chatbot Creation Workshop', 
+    date: 'July 10, 2025 at 10:30 AM', 
+    desc: 'Hands-on workshop with Jubilee Housing youth to create and interact with AI chatbots. Learn prompt engineering basics while building functional chatbots.',
+    partner: 'Jubilee Housing',
+    location: 'Washington, D.C.',
+    link: '/workshops/chatbot-workshop'
+  },
   { title: 'AI for Small Business Basics', date: 'July 15, 2024', desc: 'Intro to AI tools and automation for business owners.' },
   { title: 'Digital Literacy for Educators', date: 'August 2, 2024', desc: 'Empowering teachers with AI and digital skills.' },
 ];
@@ -28,8 +37,20 @@ export default function Workshops() {
             >
               <h3 className="text-xl font-semibold text-white mb-2">{w.title}</h3>
               <div className="text-cyan-400 mb-2">{w.date}</div>
+              {w.partner && (
+                <div className="text-yellow-400 mb-2 font-medium">Partner: {w.partner}</div>
+              )}
+              {w.location && (
+                <div className="text-gray-400 mb-2 text-sm">{w.location}</div>
+              )}
               <p className="text-gray-300 mb-4">{w.desc}</p>
-              <a href="#register" className="inline-block px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg hover:bg-cyan-500/20 transition-colors font-medium">Register</a>
+              {w.link ? (
+                <Link to={w.link} className="inline-block px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg hover:bg-cyan-500/20 transition-colors font-medium">
+                  Join Workshop
+                </Link>
+              ) : (
+                <a href="#register" className="inline-block px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-lg hover:bg-cyan-500/20 transition-colors font-medium">Register</a>
+              )}
             </motion.div>
           ))}
         </div>

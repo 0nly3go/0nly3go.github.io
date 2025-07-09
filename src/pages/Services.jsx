@@ -119,7 +119,8 @@ export default function Services() {
       ),
       link: "/services/ethical-ai-consulting",
       features: ["Bias detection", "Privacy protection", "Compliance guidance", "Ethical frameworks"]
-    }
+    },
+
   ];
 
   return (
