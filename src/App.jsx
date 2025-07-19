@@ -34,6 +34,8 @@ import SocialMediaAutomation from './pages/services/SocialMediaAutomation';
 import Mentorship from './pages/services/Mentorship';
 import EthicalAIConsulting from './pages/services/EthicalAIConsulting';
 import ChatbotWorkshop from './pages/workshops/ChatbotWorkshop';
+import Blog from './pages/Blog';
+import BeginnersGuideToAI from './pages/blog/BeginnersGuideToAI';
 
 function scrollToSection(id) {
   // Wait for navigation, then scroll
@@ -73,6 +75,7 @@ function Navbar() {
     { label: 'Case Studies', to: '/case-studies' },
     { label: 'Workshops', to: '/workshops' },
     { label: 'Resources', to: '/resources' },
+    { label: 'Blog', to: '/blog' },
     { label: 'About', to: '/about' },
   ];
 
@@ -633,6 +636,8 @@ function App() {
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/beginners-guide-to-ai" element={<BeginnersGuideToAI />} />
             {/* Individual service routes */}
             <Route path="/services/workflow-automation" element={<WorkflowAutomation />} />
             <Route path="/services/ai-agents-chatbots" element={<AIAgentsChatbots />} />
