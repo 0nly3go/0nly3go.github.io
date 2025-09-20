@@ -25,7 +25,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <img 
               src="/assets/LogoMark_White.png" 
-              alt="FaithLineAI Footer Logo" 
+              alt="FaithlineAI Footer Logo" 
               className="h-10 w-auto object-contain"
             />
             <p className="text-gray-400 text-sm">
@@ -89,7 +89,7 @@ export const Footer = () => {
         <div className="mt-12 pt-8 border-t border-cyan-500/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} FaithLineAI. All rights reserved.
+              &copy; {new Date().getFullYear()} FaithlineAI. All rights reserved.
             </p>
             <motion.div 
               initial={{ opacity: 0 }}

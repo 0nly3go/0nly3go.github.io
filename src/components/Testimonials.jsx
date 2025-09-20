@@ -10,7 +10,7 @@ export const Testimonials = () => {
     {
       name: "Shriya Baru",
       role: "CEO, Kolis USA",
-      feedback: "FaithLineAI transformed our online presence, increasing sales by 40%.",
+      feedback: "FaithlineAI transformed our online presence, increasing sales by 40%.",
       image: "/assets/testimonials/shriya.jpg"
     },
     {
@@ -22,7 +22,7 @@ export const Testimonials = () => {
     {
       name: "Aaron Satko",
       role: "Operations Manager, AGS Store",
-      feedback: "Implementing FaithLineAI's solutions streamlined our entire business process.",
+      feedback: "Implementing FaithlineAI's solutions streamlined our entire business process.",
       image: "/assets/testimonials/aaron.jpg"
     }
   ];

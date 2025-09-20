@@ -36,6 +36,8 @@ import EthicalAIConsulting from './pages/services/EthicalAIConsulting';
 import ChatbotWorkshop from './pages/workshops/ChatbotWorkshop';
 import Blog from './pages/Blog';
 import BeginnersGuideToAI from './pages/blog/BeginnersGuideToAI';
+// Mock site import
+import AdAstraAI from './mock-sites/ad-astra-ai/AdAstraAI';
 
 function scrollToSection(id) {
   // Wait for navigation, then scroll
@@ -89,7 +91,7 @@ function Navbar() {
       {/* Logo */}
       <div className="flex-shrink-0">
         <Link to="/">
-          <img src="/assets/LogoMark_White.png" alt="FaithLineAI Logo" className="h-10 w-auto object-contain" />
+          <img src="/assets/LogoMark_White.png" alt="FaithlineAI Logo" className="h-10 w-auto object-contain" />
         </Link>
       </div>
       {/* Desktop Nav */}
@@ -368,7 +370,7 @@ function App() {
                     <div className="text-center mb-16">
                       <h2 className="text-white text-4xl font-semibold mb-6">About Us</h2>
                       <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-                        FaithLineAI specializes in providing AI-powered solutions designed to help small businesses grow into 
+                        FaithlineAI specializes in providing AI-powered solutions designed to help small businesses grow into 
                         medium-sized enterprises. We emphasize faith-based values of patience, ease, and purpose to nurture 
                         a supportive and trustworthy service.
                       </p>
@@ -649,6 +651,8 @@ function App() {
             <Route path="/services/mentorship" element={<Mentorship />} />
             <Route path="/services/ethical-ai-consulting" element={<EthicalAIConsulting />} />
             <Route path="/workshops/chatbot-workshop" element={<ChatbotWorkshop />} />
+            {/* Mock sites */}
+            <Route path="/mock/ad-astra-ai" element={<AdAstraAI />} />
           </Routes>
         </div>
       </div>

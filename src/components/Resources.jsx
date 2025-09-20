@@ -120,6 +120,38 @@ export const Resources = () => {
             ))}
           </div>
         </div>
+
+        {/* Ad Astra AI Mock Site */}
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl font-semibold text-white mb-8">Explore Our Work</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ 
+              scale: 1.02,
+              translateZ: 20,
+            }}
+            transition={{ duration: 0.3 }}
+            className="inline-block"
+          >
+            <motion.a
+              href="/mock/ad-astra-ai"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-800/50 to-black/50 border border-gray-600/50 text-gray-300 font-semibold rounded-xl hover:border-cyan-400/30 hover:text-cyan-300 transition-all duration-300 group"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="flex items-center gap-3">
+                <div className="text-2xl">⭐</div>
+                <div className="text-left">
+                  <div className="text-lg font-bold">Ad Astra AI</div>
+                  <div className="text-sm opacity-80">Mock AI Consultancy Site</div>
+                </div>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </motion.a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
